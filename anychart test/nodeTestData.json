@@ -1,0 +1,26 @@
+{
+
+    "nodes": [
+        { "id" : "Physics"},
+        { "id" : "Mechanics"},
+        { "id" : "electromagnetism"},
+        { "id" : "Thermodynamics"},
+        { "id" : "Quantum Physics"},
+        { "id" : "Particle Physics"},
+        { "id" : "Astrophysics"},
+        { "id" : "Condensed Matter Phsyics"},
+        { "id" : "Nuclear Physics"},
+        { "id" : "Biophsics"}
+    ],
+    "edges" : [
+        { "from": "Physics", "to": "Mechanics" },
+        { "from": "Physics", "to": "electromagnetism" },
+        { "from": "Physics", "to": "Thermodynamics" },
+        { "from": "Physics", "to": "Quantum Physics" },
+        { "from": "Physics", "to": "Particle Physics" },
+        { "from": "Physics", "to": "Astrophysics" },
+        { "from": "Physics", "to": "Condensed Matter Phsyics" },
+        { "from": "Physics", "to": "Nuclear Physics" },
+        { "from": "Physics", "to": "Biophsics" }
+    ]
+}

@@ -1,0 +1,29 @@
+class Blocky {
+  
+    constructor() {
+      this.x = 100;
+      this.y = h / 2;
+    
+      this.yspeed = 0;
+      this.grav = 0.2;
+    }
+    
+    
+    jump() {
+      this.yspeed = -5;
+    }
+  
+     update() {
+       this.y = this.y + this.yspeed;
+       this.y = constrain(this.y, 0, h - scl);
+       this.yspeed = this.yspeed + this.grav;
+       this.y = constrain(this.y, 0, h);
+       //console.log(this.y);
+     
+     }
+    
+    show() {
+      fill(255);
+      rect(this.x, this.y , scl, scl);
+    }
+  }

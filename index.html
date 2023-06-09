@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #1b1b1b;
+    }
+
+    .square {
+      width: 100px;
+      height: 100px;
+      background-color: lightgray;
+      margin: 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+    }
+
+    .square-text {
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+  <script src="../p5/lib/p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+  <script src="welcome.js"></script>
+</head>
+
+<body>
+  <main>
+    <div class="square" onclick="location.href='./Snake/SnakeGame.html';">
+      <span class="square-text"> Snake</span>
+    </div>
+    <div class="square" onclick="location.href='./Jumpy/JumpyGame.html';">
+      <span class="square-text"> Jumpy</span>
+    </div>
+    <div class="square" onclick="location.href='./Topography Generation/LandGen.html';">
+      <span class="square-text"> Land Gen</span>
+    </div>
+  </main>
+</body>
+
+</html>
