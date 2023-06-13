@@ -113,6 +113,5 @@ function start() {
   
   console.log(pillars.length);
   gameOver = false;
-  block = new Blocky();
 }
 
