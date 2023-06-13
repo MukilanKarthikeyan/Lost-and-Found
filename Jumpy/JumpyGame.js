@@ -13,7 +13,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(w, h);
+  cnv = createCanvas(w, h);
+  centerCanvas();
   
   
   button = createButton("Play Again");
@@ -83,6 +84,16 @@ function draw() {
   
 }
 
+function centerCanvas() {
+  let x = (windowWidth - width) / 2;
+  let y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
+function windowResized() {
+  centerCanvas();
+}
+
 function over() {
   gameOver = true;
   fill(100);
@@ -99,8 +110,8 @@ function over() {
   text(score, w/2, h/2 + 25);
   button.show();
   
-  
 }
+
 
 function start() {
   button.hide();
