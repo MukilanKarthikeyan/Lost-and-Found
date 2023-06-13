@@ -3,7 +3,8 @@ var f;
 var scl = 10;
 var xstart = 6 * scl;
 var ystart = 300;
-var gamePlay = false;
+var gameOver = false;
+
 
 document.onkeydown = function() {
     
@@ -12,24 +13,40 @@ document.onkeydown = function() {
 function setup() {
   cnv = createCanvas(600, 600);
   centerCanvas();
-  s = new Snake();
-  f = new Food();
-  f.pickLocation();
-  frameRate(10);
+
+  button = createButton("Play Again");
+  button.position((width - button.width) / 2, height/2 + 50);
+  button.style("background-color", "green")
+  button.style("font-size", "1em")
+  button.style("color", "white")
+  
+  button.style("padding", "5px")
+  button.style("position", "absolute")
+  
+  button.mousePressed(start);
+  button.hide();
+
+
+  start();
+  
 }
 
 function draw() {
-  background(51);
-  if (gamePlay) {
+  if (!gameOver) {
+    background(51);
     s.update();
-  }
-  s.show();
+    s.show();
   
-  if (s.eat(f.pos)) {
-    f.pickLocation();
-  }
+    if (s.eat(f.pos)) {
+      f.pickLocation();
+    }
   
-  f.show();
+    f.show();
+  } else {
+    over();
+  }
+
+  
   
 }
 
@@ -78,4 +95,33 @@ function Food() {
     fill(255, 0, 100);
     rect(this.pos.x, this.pos.y, scl, scl);
   }
+}
+
+function over() {
+  gameOver = true;
+  fill(100);
+  let rectw = 350;
+  let recth = 200;
+  rect((w - rectw) / 2, (h - recth) / 2, rectw, recth);
+  fill(255);
+  //textFont(myFont);
+  textSize(52);
+  textAlign(CENTER);
+  text("GAME OVER", w/2, h/2 - 25);
+  score = "Score: " + counter;
+  textSize(36);
+  text(score, w/2, h/2 + 25);
+  button.show();
+}
+
+function start() {
+  button.hide();
+
+
+  s = new Snake();
+  f = new Food();
+  f.pickLocation();
+  frameRate(10);
+
+  gameOver = false;
 }

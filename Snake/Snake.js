@@ -1,12 +1,12 @@
-
+//TODO: convert to a class and not a function
 
 function Snake() {
   this.x = xstart;
   this.y = ystart;
 
-    console.log(xstart, ystart);
+  console.log(xstart, ystart);
   
-    this.xspeed = 0;
+  this.xspeed = 0;
   this.yspeed = 0;
   this.total = 1;
   this.tail = [];
@@ -32,7 +32,7 @@ function Snake() {
       if (d < 1) {
         this.total = 0;
         this.tail = [];
-        this.gameOver();
+        gameOver = true;
       }
     }
   }
@@ -45,15 +45,15 @@ function Snake() {
   
   this.update = function() {
     if (gamePlay == false) {
-        return
+      return
     }
 
     this.end();
     
     if (this.total === this.tail.length) {
-        for (var i = 0; i < this.tail.length -1; i++) {
-            this.tail[i] = this.tail[i+1];
-        }
+      for (var i = 0; i < this.tail.length -1; i++) {
+        this.tail[i] = this.tail[i+1];
+      }
     }
     
     this.tail[this.total - 1] = createVector(this.x, this.y);
