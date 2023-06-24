@@ -16,7 +16,8 @@ let left = [45, 30, 15, 0, 0, -15, -30, -45];
 let right = [135, 150, 165, 180, 180, -165, -150, -135];
 
 function setup() {
-  createCanvas(w, h);
+  cnv = createCanvas(w, h);
+  centerCanvas();
   start();
   console.log(radians(left[0]));
 }
@@ -49,6 +50,16 @@ function checkMove() {
   } else if (keyIsDown(DOWN_ARROW)) {
     rightPaddle.movePaddle(false);
   }
+}
+
+function centerCanvas() {
+  let x = (windowWidth - width) / 2;
+  let y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+  
+function windowResized() {
+  centerCanvas();
 }
 
 

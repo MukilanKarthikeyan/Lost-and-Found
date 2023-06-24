@@ -14,11 +14,12 @@ function preload() {
 
 function setup() {
   cnv = createCanvas(w, h);
+  button = createButton("Play Again");
   centerCanvas();
   
   
-  button = createButton("Play Again");
-  button.position((width - button.width) / 2, height/2 + 50);
+  
+  // button.position((width - button.width) / 2, height/2 + 50);
   button.style("background-color", "green")
   button.style("font-size", "1em")
   button.style("color", "white")
@@ -88,6 +89,7 @@ function centerCanvas() {
   let x = (windowWidth - width) / 2;
   let y = (windowHeight - height) / 2;
   cnv.position(x, y);
+  button.position(x + (width - button.width) / 2, y + height/2  + 50);
 }
 
 function windowResized() {

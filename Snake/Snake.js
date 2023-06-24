@@ -8,7 +8,7 @@ function Snake() {
   
   this.xspeed = 0;
   this.yspeed = 0;
-  this.total = 1;
+  this.total = 0;
   this.tail = [];
   for (var i = 1; i <= this.total; i++) {
     this.tail.push(createVector(xstart - i * scl, ystart));
@@ -20,6 +20,7 @@ function Snake() {
     var d = dist(this.x, this.y, pos.x, pos.y)
     if (d < 1) {
       this.total++;
+      counter++;
       return true;
     }
     return false;
