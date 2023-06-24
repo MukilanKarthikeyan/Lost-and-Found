@@ -44,7 +44,7 @@ function Snake() {
   }
   
   this.update = function() {
-    if (gamePlay == false) {
+    if (gameOver == true) {
       return
     }
 
