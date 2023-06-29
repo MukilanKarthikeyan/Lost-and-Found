@@ -3,8 +3,8 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 const color = d3.scaleOrdinal(d3.schemeCategory10);
 var addTog = false;
 let margin = {top: 30, right: 30, bottom: 30, left: 30},
-    width = 1000 - margin.right - margin.left,
-    height = 800 - margin.top - margin.bottom;
+    width = window.innerWidth - margin.right - margin.left,
+    height = window.innerHeight - margin.top - margin.bottom;
 
 let bttn = d3.select('body')
              .append('button')
@@ -24,17 +24,33 @@ let svg = d3.select('body')
 
 let count = 0;
 
-let svg = d3.select('#chart-display')
+
+let zoom = d3.zoom()
+    .scaleExtent([0.5,5])
+    .on("zoom", handleZoom);
+
+function handleZoom(event) {
+    svg.attr("transform", event.transform);
+    d3.select('#background').attr("transform", event.transfrom);
+}
+
+let parent = d3.select('#chart-display')
 .append('svg')
 .attr('id', '#force-graph')
 .attr('width', "100%")
-.attr('height', height);
+.attr('height', height)
+.style("background-color", "#1F1C1C");
 
+parent.call(zoom);
+let svg = parent.append('g').attr("class", "chart");
+
+/* depreciated once .style backgroudn color was found
 svg.append("rect")
+    .attr("id", "background")
     .attr("width", "100%")
     .attr("height", "100%")
     .attr("fill", "#1F1C1C");
-
+*/
    
 var graph = {
     "nodes": [
@@ -161,7 +177,7 @@ var sim = d3.forceSimulation(graph.nodes)
             return d.name;
         })
     )
-    .force("charge", d3.forceManyBody().strength(-50))
+    .force("charge", d3.forceManyBody().strength(-150))
     .force("center", d3.forceCenter(width / 2, height / 2))
     .on("tick", ticked);
 
@@ -198,10 +214,27 @@ var node = svg
         .enter()
         .append("circle")
         .attr("r", function(d) {
-            return d.linkCount ? (d.linkCount * 2) + 4 : 4;
+            return d.linkCount ? (d.linkCount * 4) + 4 : 4;
         })
         .attr("fill", d => color(d.group))
         .call(
+            d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended)
+        );
+
+var text = svg
+  .append("g")
+  .attr("class", "labels")
+  .selectAll('text')
+  .data(graph.nodes)
+  .enter()
+  .append('text')
+  .text(function(d) {
+    return d.name;
+  })
+  .call(
             d3.drag()
                 .on("start", dragstarted)
                 .on("drag", dragged)
@@ -219,6 +252,9 @@ function ticked() {
     node
         .attr("cx", d => d.x)
         .attr("cy", d => d.y);
+   
+    text
+        .attr("transform", d => `translate(${d.x}, ${d.y})`);
 
     /**
      * link
@@ -250,7 +286,7 @@ function ticked() {
 
 function dragstarted(event) {
     if (!event.active) {
-        sim.alphaTarget(0.3).restart();
+        sim.alphaTarget(0.75).restart();
     }
     event.subject.fx = event.subject.x;
     event.subject.fy = event.subject.y;
@@ -268,6 +304,11 @@ function dragended(event) {
     event.subject.fx = null;
     event.subject.fy = null;
 }
+
+
+
+
+
 
 /** 
 
@@ -303,4 +344,3 @@ d3.json("./bob.json", function(json) {
 });
 
  */
-

@@ -1,9 +1,22 @@
+.container {
+  display: flex
+}
+
 .links line {
-    stroke: #999;
+    stroke: #555;
     stroke-opacity: 0.6;
   }
 
-  .nodes circle {
-    stroke: #fff;
-    stroke-width: 1.5px;
-  }
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+  
+}
+
+
+.labels text {
+  font-family: "sans-serif";
+  font-size: "5px";
+  fill: #ddd;
+  text-align: center;
+}
