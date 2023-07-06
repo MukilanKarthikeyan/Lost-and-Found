@@ -1,11 +1,27 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
+/*thigns to talk about in the meeting
+
+    backend search query -> returns json
+    strcture of api call and caching
+    walk me through the backend
+
+
+    call mom
+    make fried rice
+    bake cake
+
+
+*/
+
+
+
 const color = d3.scaleOrdinal(d3.schemeCategory10);
 var addTog = false;
 let margin = {top: 30, right: 30, bottom: 30, left: 30},
-    width = window.innerWidth - margin.right - margin.left,
-    height = window.innerHeight - margin.top - margin.bottom;
-
+    width = window.innerWidth,
+    height = window.innerHeight;
+/*
 let bttn = d3.select('body')
              .append('button')
              .text('add field')
@@ -13,8 +29,8 @@ let bttn = d3.select('body')
                addTog = true;
                console.log("clicked");
              });
-
-/** 
+*/
+/*
 let svg = d3.select('body')
     .append('svg')
     .attr("id", '#force-graph')
@@ -41,7 +57,8 @@ let parent = d3.select('#chart-display')
 .attr('height', height)
 .style("background-color", "#1F1C1C");
 
-parent.call(zoom);
+parent.call(zoom)
+    .on("dblclick.zoom", null);
 let svg = parent.append('g').attr("class", "chart");
 
 /* depreciated once .style backgroudn color was found
@@ -182,64 +199,74 @@ var sim = d3.forceSimulation(graph.nodes)
     .on("tick", ticked);
 
 var link = svg
-        .append("g")
-        .attr("class", "links")
-        .selectAll("line")
-        .data(graph.links)
-        .enter()
-        .append("line")
-        .attr("stroke-width", function(d) {
-            return 3;
-        });
+    .append("g")
+    .attr("class", "links")
+    .selectAll("line")
+    .data(graph.links)
+    .enter()
+    .append("line")
+    .attr("stroke-width", function(d) {
+        return 3;
+    });
 
 
+graph.links.forEach(function(link){
 
-
-        graph.links.forEach(function(link){
-
-            // initialize a new property on the node
-            if (!link.source["linkCount"]) link.source["linkCount"] = 0; 
-            if (!link.target["linkCount"]) link.target["linkCount"] = 0;
-          
-            // count it up
-            link.source["linkCount"]++;
-            link.target["linkCount"]++;    
-          });
+    // initialize a new property on the node
+    if (!link.source["linkCount"]) link.source["linkCount"] = 0; 
+    if (!link.target["linkCount"]) link.target["linkCount"] = 0;
+    
+    // count it up
+    link.source["linkCount"]++;
+    link.target["linkCount"]++;    
+    });
 
 var node = svg
-        .append("g")
-        .attr("class", "nodes")
-        .selectAll("circle")
-        .data(graph.nodes)
-        .enter()
-        .append("circle")
-        .attr("r", function(d) {
-            return d.linkCount ? (d.linkCount * 4) + 4 : 4;
-        })
-        .attr("fill", d => color(d.group))
-        .call(
-            d3.drag()
-                .on("start", dragstarted)
-                .on("drag", dragged)
-                .on("end", dragended)
-        );
+    .append("g")
+    .attr("class", "nodes")
+    .selectAll("circle")
+    .data(graph.nodes)
+    .enter()
+    .append("circle")
+    .attr("r", function(d) {
+        return d.linkCount ? (d.linkCount * 4) + 4 : 4;
+    })
+    .attr("fill", d => color(d.group))
+    .call(
+        d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+    )
+    .on("dblclick", (d) => {
+        moveChart(-400);
+        // if the iframe already exists then change src else add iframe
+        // or loadhtml
+        d3.select("#chart-display")
+            .append('iframe')
+            .attr("id", "pop-up")
+            .attr("width", 1000)
+            .attr("height", height)
+            .attr("src", 'https://www.google.com/');
+            //function(d) {return d.src;}
+    });
 
 var text = svg
-  .append("g")
-  .attr("class", "labels")
-  .selectAll('text')
-  .data(graph.nodes)
-  .enter()
-  .append('text')
-  .text(function(d) {
-    return d.name;
-  })
-  .call(
-            d3.drag()
-                .on("start", dragstarted)
-                .on("drag", dragged)
-                .on("end", dragended)
-        );
+    .append("g")
+    .attr("class", "labels")
+    .selectAll('text')
+    .data(graph.nodes)
+    .enter()
+    .append('text')
+    .text(function(d) {
+        return d.name;
+    })
+    .call(
+        d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+    );
        
 function ticked() {
 
@@ -254,7 +281,8 @@ function ticked() {
         .attr("cy", d => d.y);
    
     text
-        .attr("transform", d => `translate(${d.x}, ${d.y})`);
+        .attr("x", d => d.x)
+        .attr("y", d => d.y);
 
     /**
      * link
@@ -305,7 +333,12 @@ function dragended(event) {
     event.subject.fy = null;
 }
 
-
+function moveChart(distance) {
+    
+    node.attr("transform", `translate(${distance}, 0)`);
+    link.attr("transform", `translate(${distance}, 0)`);
+    text.attr("transform", `translate(${distance}, 0)`);
+}
 
 
 
