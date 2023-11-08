@@ -247,7 +247,7 @@ var node = svg
             .attr("id", "pop-up")
             .attr("width", 1000)
             .attr("height", height)
-            .attr("src", 'https://www.google.com/');
+            .attr("src", 'https://docs.google.com/document/d/10GaDFdu3g30Z1fwmZCuGDe5NkawloU3p75roFplluRM/edit?usp=sharing');
             //function(d) {return d.src;}
     });
 
@@ -259,6 +259,7 @@ var text = svg
     .enter()
     .append('text')
     .text(function(d) {
+        
         return d.name;
     })
     .call(
