@@ -2,8 +2,8 @@ var scl = 20;
 var xstart = 6 * scl;
 var ystart = 300;
 
-var w = 600;
-var h = 600;
+var w = 800;
+var h = 800;
 
 var diameter = 10;
 var robot;
