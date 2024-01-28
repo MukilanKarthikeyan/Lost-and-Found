@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  if (!gameO/ver) {
+  if (!gameOver) {
     background(51);
     s.update();
     s.show();
