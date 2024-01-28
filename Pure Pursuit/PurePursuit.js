@@ -50,7 +50,7 @@ function draw() {
         for (let i = 0; i < pointArray[j].length; i++) {
             circle(pointArray[j][i].x, pointArray[j][i].y, diameter);
         }
-        for ( let i = 1; i < pointArray[arr].length; i++) {
+        for (let i = 1; i < pointArray[j].length; i++) {
             line(pointArray[j][i - 1].x, pointArray[j][i-1].y, pointArray[j][i].x, pointArray[j][i].y);
         }
     }
@@ -84,6 +84,20 @@ function keyTyped() {
         pointArray.push(new Array());
         arr++;
         console.log("-------------------track " + arr + "------------------------")
+    } 
+    if (key === 'b') {
+        console.log("-------------------points------------------------")
+        for (let i = 0; i <= arr; i++) {
+            let temp = new Array();
+            for (let j = 0; j < pointArray[i].length; j++) {
+                
+                temp.push(pointArray[i][j].x + ", " + pointArray[i][j].y + "\n");
+                
+            }
+            console.log(...temp);
+        }
+       
+        
     } 
 }
 
