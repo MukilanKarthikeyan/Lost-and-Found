@@ -1,6 +1,6 @@
 let scl = 5;
-let w = 800;
-let h = 800;
+let w = 700;
+let h = 700;
 let grid;
 let next;
 let rows;
@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  
   noStroke();
   if (mouseIsPressed) {
     let x = floor(mouseX / scl);
@@ -38,7 +38,6 @@ function draw() {
 
     grid[x][y] = 1;
   }
-  console.log(pause);
   if (!pause) {
     step();
     temp = next;
@@ -103,32 +102,26 @@ function step() {
       }
       
       let curr = heightColorMap[i][0];
-      if (j != cols - 1 && grid[i][j + 1] == 0) {
-        next[i][j] = 0;
-        next[i][j + 1] = 1;
-      } else if (i > 0 && i < cols -1 && j != cols - 1) {
 
-        let left = heightColorMap[i - 1][0];
-        let right = heightColorMap[i + 1][0];
-
-        if (curr < left && curr <= right) {
-          next[i][j] = 1 ;
-        } else if (curr > left && curr > right) {
-          dir = round(random(2)) - 1;
+      if (j < cols - 1) {
+        let left = (i > 0 && grid[i - 1][j + 1] == 0);
+        let right = (i < cols && grid[i + 1][j + 1] == 0)
+        
+        if (grid[i][j + 1] == 0) {
+          next[i][j] = 0;
+          next[i][j + 1] = 1;
+        } else if (left && right) {
+          let dir = round(random(2)) - 1;
           next[i][j] = 0;
           next[i + dir][j + 1] = 1;
-          heightColorMap[i][0]--;
-          heightColorMap[i + dir][0]++;
-        } else if (curr > left) {
+        } else if (left) { 
           next[i][j] = 0;
-          next[i - 1][j + 1] = 1
-          heightColorMap[i][0]--;
-          heightColorMap[i - 1][0]++;
-        } else{
+          next[i - 1][j + 1] = 1;
+        } else if (right) {
           next[i][j] = 0;
-          next[i + 1][j + 1] = 1
-          heightColorMap[i][0]--;
-          heightColorMap[i + 1][0]++;
+          next[i + 1][j + 1] = 1;
+        }else {
+          next[i][j] = 1;
         }
       } else {
         next[i][j] = 1;
@@ -151,9 +144,7 @@ function mousePressed(event) {
 
 function keyTyped() {
   if (key === ' ') {
-    console.log("paused" + pause);
     pause = !pause;
-
   }
 }
 

@@ -2,8 +2,8 @@ var scl = 20;
 var xstart = 6 * scl;
 var ystart = 300;
 
-var w = 800;
-var h = 800;
+var w = 720;
+var h = 720;
 
 var diameter = 10;
 var robot;
@@ -28,18 +28,15 @@ function setup() {
     let x = (windowWidth - width) / 2;
     let y = (windowHeight - height) / 2;
 
-    
 
-
-  
-  
+    bg = loadImage('./Pure Pursuit/purdue_map_black_720.png');
 }
   
 function draw() {
     if (noChange) {
         return;
     }
-    background(255);
+    background(bg);
     //console.log("draw called");
     if (robot) {
         fill(100, 200, 50);
@@ -74,9 +71,6 @@ function undo() {
 function mouseDragged(event) {
     let clickx = mouseX;
     let clicky = mouseY;
-    
-
-  
 }
 
 function keyTyped() {
