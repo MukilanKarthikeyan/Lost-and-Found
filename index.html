@@ -7,72 +7,208 @@
   <title>Welcome</title>
   <style>
     body {
-      padding: 0;
+      padding: 20;
       margin: 0;
-      background-color: #1b1b1b;
+      background-color: #2b2b2b;
+    }
+
+    .col-container {
+
+      width: 100vw;
+
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0px 20px 20px 20px;
+      row-gap: 0px;
+      column-gap: 0px;
+
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      overflow: auto;
+      justify-content: space-evenly;
+
+    }
+
+    .column-list {
+      padding: 0.25rem;
+      border-radius: 0.5rem;
+      
     }
 
     .square {
-      width: 100px;
-      height: 100px;
+      width: 24vw;
+      height: 45vh;
       background-color: lightgray;
       margin: 5px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-
+      border-radius: 5px;
     }
 
     .square-text {
-      color: black;
+      color: #3b3b3b;
       font-weight: bold;
     }
+
+    .scroller {
+        max-width: 400px;
+        max-height: 100vh;
+        padding: 0px 0px 0px 0px;
+    }
+
+    .scroller_inner {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width:100vh;
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        row-gap: 0px;
+    }
+    
+
+    .scroller[data-animated="true"] {
+      overflow: hidden;
+      /*-webkit-mask: linear-gradient(transparent, #ffffff 5%, #ffffff 95%, transparent);*/
+      mask: linear-gradient(transparent, #ffffff 10%, #ffffff 90%, transparent);
+
+    }
+
+    .scroller[data-animated="true"] .scroller_inner {
+      flex-wrap: nowrap;
+      animation: scroll var(--_animation-duration, 100s) var(--_animation_dir, forwards) linear infinite;
+    }
+
+    .scroller[data-direction="up"] {
+      --_animation_dir: forwards;
+    }
+
+    .scroller[data-direction="down"] {
+      --_animation_dir: reverse;
+    }
+
+    .scroller[data-speed="slower"] {
+      --_animation-duration: 135s;
+    }
+    .scroller[data-speed="crawl"] {
+      --_animation-duration: 180s;
+    }
+    .scroller[data-speed="slowest"] {
+      --_animation-duration: 150s;
+    }
+    
+    
+    @keyframes scroll {
+      to {
+        transform: translate(0%, -50%);
+      }
+    }
+    
+
+
   </style>
-  <script src="../p5/lib/p5.js"></script>
   <!-- <script src="../addons/p5.sound.js"></script> -->
-  <script src="welcome.js"></script>
+  <script src="./main.js"></script>
 </head>
 
 <body>
   <main>
+    <div class="col-container">
+      <div class="scroller" data-speed="slower">
+        <ul class="column-list scroller_inner">
+          <li class="square" onclick="location.href='./Minesweeper/MinesweeperGame.html';">
+            <span class="square-text"> Minesweeper </span>
+          </li>
+    
+          <li class="square" onclick="location.href='./Snake/SnakeGame.html';">
+            <span class="square-text"> Snake </span>
+          </li>
+    
+          <li class="square" onclick="location.href='./Jumpy/JumpyGame.html';">
+            <span class="square-text"> Jumpy </span>
+          </li>
+    
+          <li class="square" onclick="location.href='./Pong/PongGame.html';">
+            <span class="square-text"> Pong </span>
+          </li>
+
+        </ul>   
+      </div>
+
+      <div class="scroller" data-speed="crawl" data-direction="up" >
+        <ul class="column-list scroller_inner">
+          
+          <li class="square" onclick="location.href='./Jumpy/JumpyGame.html';">
+            <span class="square-text"> Jumpy </span>
+          </li>
+    
+          <li class="square" onclick="location.href='./Pong/PongGame.html';">
+            <span class="square-text"> Pong </span>
+          </li>
+
+          <li class="square" onclick="location.href='./Minesweeper/MinesweeperGame.html';">
+            <span class="square-text"> Minesweeper </span>
+          </li>
+    
+          <li class="square" onclick="location.href='./Snake/SnakeGame.html';">
+            <span class="square-text"> Snake </span>
+          </li>
     
 
+        </ul>   
+      </div>
 
-    <div class="square" onclick="location.href='./Minesweeper/MinesweeperGame.html';">
-      <span class="square-text"> Minesweeper </span>
+      <div class="scroller" data-speed="slowest">
+        <ul class="column-list scroller_inner">
+          <li class="square" onclick="location.href='./FallingSand/FallingSand.html';">
+            <span class="square-text"> Falling Sand </span>
+          </li>
+    
+          <li class="square" onclick="location.href='./d3Demo/d3Demo.html';">
+            <span class="square-text"> datavis </span>
+          </li>
+          
+          <li class="square" onclick="location.href='./Topography Generation/LandGen.html';">
+            <span class="square-text"> Land Gen </span>
+          </li>
+          
+          <li class="square" onclick="location.href='./Pure Pursuit/PurePursuit.html';">
+            <span class="square-text"> Pure Pursuit </span>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="scroller">
+        <ul class="column-list scroller_inner">
+          
+          <li class="square" onclick="location.href='./Topography Generation/LandGen.html';">
+            <span class="square-text"> Land Gen </span>
+          </li>
+          
+          <li class="square" onclick="location.href='./Pure Pursuit/PurePursuit.html';">
+            <span class="square-text"> Pure Pursuit </span>
+          </li>
+
+          <li class="square" onclick="location.href='./FallingSand/FallingSand.html';">
+            <span class="square-text"> Falling Sand </span>
+          </li>
+    
+          <li class="square" onclick="location.href='./d3Demo/d3Demo.html';">
+            <span class="square-text"> datavis </span>
+          </li>
+          
+
+        </ul>
+      </div>
+      
     </div>
     
-    <div class="square" onclick="location.href='./Snake/SnakeGame.html';">
-      <span class="square-text"> Snake </span>
-    </div>
-    <div class="square" onclick="location.href='./Jumpy/JumpyGame.html';">
-      <span class="square-text"> Jumpy </span>
-    </div>
-    <div class="square" onclick="location.href='./Pong/PongGame.html';">
-      <span class="square-text"> Pong </span>
-    </div>
-    <div class="square" onclick="location.href='./d3Demo/d3Demo.html';">
-      <span class="square-text"> datavis </span>
-    </div>
-    <div class="square" onclick="location.href='./Topography Generation/LandGen.html';">
-      <span class="square-text"> Land Gen </span>
-    </div>
-    <div class="square" onclick="location.href='./Pure Pursuit/PurePursuit.html';">
-      <span class="square-text"> Pure Pursuit </span>
-    </div>
-
-    <div class="square" onclick="location.href='./FallingSand/FallingSand.html';">
-      <span class="square-text"> Falling Sand </span>
-    </div>
-
-
-    <div class="square" onclick="location.href='./CoinFlip/CoinFlip.html';">
-      <span class="square-text"> Coin FLip</span>
-    </div>
-    <div class="square" onclick="location.href='./Reversi/Reversi.html';">
-      <span class="square-text"> Reversi</span>
-    </div>
   </main>
 </body>
 
