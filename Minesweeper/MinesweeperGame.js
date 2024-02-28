@@ -121,9 +121,7 @@ function mousePressed(event) {
     game = true;
   }
   
-  if (event.button == 2) {
-    console.log("right");
-  }
+  
   if (event.button == 0 && !grid[row][col].seen) {
     squaresRevealed++; 
   }
@@ -131,9 +129,13 @@ function mousePressed(event) {
   if (grid[row][col].interact(event.button)) {
     revealNeighbors(row, col);
   }
-  winConditon(row, col);
+  if (event.button != 2) {
+    console.log("right");
+    winConditon(row, col);
+  }
+  
   resetBool();
-  console.log(squaresRevealed);
+  //console.log(squaresRevealed);
   
   
 }
@@ -144,6 +146,11 @@ function winConditon(row, col){
   }
   if (grid[row][col].mine) {
     this.lose = true;
+    for (let i = 0; i < grid.length; i++) {
+      for (let j = 0; j < grid[i].length; j++) {
+        grid[i][j].gameover();
+      }
+    }
   }
 }
 

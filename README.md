@@ -13,12 +13,18 @@ building website asthetic to display projects
 
 Bug fixes:
     minesweepers
-        - win/lose condition
-        - mark mine reveas empty spaces (test mines with impunity)
+        - win/lose condition --> Condition checked Implement end Screen
+        - ~~mark mine reveas empty spaces (test mines with impunity)~~ Bug fixed
     Falling Sand
-        - sometiems sand falling directly onto apex of pile dissapears and does not correctly dissapate
+        - sometimes sand falling directly onto apex of pile dissapears and does not correctly dissapate
+        
 Future projects:
     - Boids
+        - building in p5js
+        - webgl use three.js
+        - 3D boids? 
+            - generate points on a sphere
+
     - Cellular Automata
         - conway's game of life
         - interactive automata rules

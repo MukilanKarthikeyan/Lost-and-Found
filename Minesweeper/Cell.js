@@ -35,9 +35,11 @@ class Cell {
       if (this.seen) {
         return;
       }
+      let neigh = true;
 
       if (button == 2) {
         this.flag = !this.flag;
+        neigh = false;
       } else if (button == 0) {
         this.seen = true;
       }
@@ -45,7 +47,16 @@ class Cell {
       //console.log("showing:" + this.x + " " + this.y + " " + this.flag + "|" + this.adj);
       this.show()
 
-      return (this.adj == 0 && !this.mine);
+      return (neigh && this.adj == 0 && !this.mine);
+    }
+
+    gameover() {
+      this.seen = this.mine || this.seen;
+      /*
+      if (this.mine) {
+        this.seen = true;
+      }
+      */
     }
 
     
