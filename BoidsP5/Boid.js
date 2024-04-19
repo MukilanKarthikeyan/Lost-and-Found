@@ -43,9 +43,9 @@ class Boid {
         this.vel.add(this.accl);
         this.vel.limit(this.maxSpeed);
         this.accl = createVector(0,0);
-        //this.accl = this.align(boids).mult(this.alignWeight);
-        //this.accl.add(this.cohesion(boids).mult(this.cohesionweight));
-        this.accl.add(this.seperate(boids).mult(this.sperationweight));
+        this.accl = this.align(boids).mult(this.alignWeight);
+        this.accl.add(this.cohesion(boids).mult(this.cohesionweight));
+        //this.accl.add(this.seperate(boids).mult(this.sperationweight));
         this.accl.limit(this.maxAccl);
        
     }

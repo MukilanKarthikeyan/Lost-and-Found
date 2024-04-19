@@ -2,7 +2,7 @@ const width = 800;
 const height = 600;
 const bckgrdColor = 100; //"#87ceeb"; //"#02ccfe";
 let flock;
-let numBoids = 10;
+let numBoids = 200;
 
 
 function setup() {
