@@ -1,5 +1,0 @@
-class Boid {
-    constructor() {
-   
-    }
-}
