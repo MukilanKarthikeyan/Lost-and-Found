@@ -6,19 +6,36 @@
         <link rel="stylesheet" href="style.css">
         <script src="./script.js">s</script>
         <style>
-            .card {
+            .photo-deck {
+                width: 100vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            .photo-card {
                 width: 30vw;
+                height: 20vh;
+                margin: 5px;
+                border-radius: 10px;
+                background-position: 50% 50%;
+                background-size: cover;
+                background-color: aliceblue;
+                background-image: url(res/loading\ image.jpg);
+            }
+
+            .card {
+                width: 20vw;
                 height: 40vh;
                 margin: 5px;
                 background-color:#337ab7;
-                border-radius: 5px;
+                border-radius: 10px;
             }
-            .card-img {
+            .card .image {
                 width: 100%;
                 height: 70%;
                 border-radius: 5px 5px 0px 0px;
             }
-            .card-content {
+            .cardcontent {
                 background-color: #337ab7;
                 justify-content: center;
                 border-radius: 0px 0px 5px 5px;
@@ -28,22 +45,66 @@
                 font-weight: bold;
             }
 
+            .header {
+                width: 100vw;
+                display: flex;
+                flex-direction: row;
+                background-color: #4d9fe7;
+                
+
+            }
+            .header .logo {
+                width: 30vw;
+                color: #177dd6;
+            }
+            .header .nav {
+                width: 60vw;
+                display: flex;
+                flex-direction: row-reverse;
+                column-gap: 2vw;
+                
+
+            }
+            .canvas {
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: fixed;
+                z-index: -9999;
+            }
 
         </style>    
         </head>
     <body>
         <main>
-            <div class="header"></div>
+            <div class="header">
+                <div class="logo">
+                    <h1>Lost and Found</h1>
+                </div>
+                <div class="nav">
+                    <button>Media</button>
+                    <button>Robotics</button>
+                    <button onclick="location.href='js_workshop/index.html';">CS</button>
+                </div>
+            </div>
 
             <div class="card">
-                <img class="card-img" src="res/loading image.jpg">
+                <img class="image" src="res/loading image.jpg">
                     <span class="light-text">text</span>
-                <div class="card-content">
+                <div class="content">
                     <p class="light-text">Here is some temprorary text for a card</p>
                 </div>
             </div>
 
             <button onclick="playAudio('res/Beneath(simplified).mp3')">Play Beneath from Dive</button>
+            <div class="photo-deck">
+                <div class="photo-card"></div>
+                <div class="photo-card"></div>
+                <div class="photo-card"></div>
+                <div class="photo-card"></div>
+                    
+            </div>
+            <canvas id="canvas"></canvas>
         </main>
     </body>
 </html>

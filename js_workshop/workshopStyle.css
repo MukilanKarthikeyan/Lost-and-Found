@@ -7,7 +7,6 @@ body {
   .col-container {
 
     width: 100vw;
-
     display: flex;
     flex-direction: row;
     position: fixed;
