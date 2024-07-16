@@ -17,6 +17,8 @@ function setup() {
     centerCanvas();
     background(255);
 
+    robLeg = Leg(legLength, 100, 100);
+
     relorigin = createVector(w/2, h/2);
     end = createVector(relorigin.x + 100, relorigin.y + 100)
     vel = createVector(0, 0);
@@ -25,8 +27,8 @@ function setup() {
     relend = createVector(end.x - relorigin.x, end.y - relorigin.y);
 
     angleref = createVector(0, 100);
-    alpha = 0;
     theta = 0;
+    omega = 0;
     findAngles();
 
 }
@@ -55,7 +57,7 @@ function draw() {
     circle(midpoint.x, midpoint.y, 5);// midpoint mark
 
     
-    l1 = createVector(cos( PI/2 - theta - alpha), -sin(PI/2 - theta - alpha)).mult(legLength);
+    l1 = createVector(cos( PI/2 - omega - theta), -sin(PI/2 - omega - theta)).mult(legLength);
     l1.add(end);
     fill(0, 20);
     strokeWeight(2);
@@ -82,11 +84,11 @@ function limitRot() {
 
 function findAngles() {
     len = relorigin.dist(end) / 2;
-    theta = acos(len / legLength);
+    omega = acos(len / legLength);
 
-    alpha = angleref.angleBetween(relend);
+    theta = angleref.angleBetween(relend);
 
-    return theta;
+    return omega;
 }
 
 function centerCanvas() {
