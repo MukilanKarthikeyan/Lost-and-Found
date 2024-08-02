@@ -1,23 +1,15 @@
-//const { reloadAsync } = require("expo-updates");
-
-var scl = 20;
-var xstart = 6 * scl;
-var ystart = 300;
-
 var w = 720;
 var h = 720;
 
 var diameter = 20;
 const legLength = 100;
 
-
-
 function setup() {
     cnv = createCanvas(w, h);
     centerCanvas();
     background(255);
 
-    robLeg = Leg(legLength, 100, 100);
+    
 
     relorigin = createVector(w/2, h/2);
     end = createVector(relorigin.x + 100, relorigin.y + 100)
@@ -30,6 +22,7 @@ function setup() {
     theta = 0;
     omega = 0;
     findAngles();
+    robLeg = new Leg(legLength, 100, 100, relorigin);
 
 }
   
@@ -46,7 +39,7 @@ function draw() {
     stroke(20, 50);
     circle(relorigin.x, relorigin.y, legLength*4);
     circle(relorigin.x, relorigin.y, legLength*2);
-    circle(end.x, end.y, legLength*2);// circles for range of motion
+    //circle(end.x, end.y, legLength*2);// circles for range of motion
 
     strokeWeight(1);
     stroke(20)
@@ -56,8 +49,8 @@ function draw() {
     fill(255,0,0);
     circle(midpoint.x, midpoint.y, 5);// midpoint mark
 
-    
-    l1 = createVector(cos( PI/2 - omega - theta), -sin(PI/2 - omega - theta)).mult(legLength);
+    //line(relorigin.x, relorigin.y, cos(PI), sin(PI));
+    l1 = createVector(cos( PI/2 - omega - theta ), - sin(PI/2 - omega - theta)).mult(legLength);
     l1.add(end);
     fill(0, 20);
     strokeWeight(2);
@@ -65,10 +58,14 @@ function draw() {
     line(end.x, end.y, l1.x, l1.y);
 
     line(relorigin.x, relorigin.y, l1.x, l1.y);
-
+    stroke(120, 200, 150);
+    line(relorigin.x, relorigin.y, relorigin.x + cos(PI/2 - theta - omega)*100, relorigin.y - sin(PI/2 - theta - omega)*100);
+    stroke(155, 20, 35);
+    line(relorigin.x, relorigin.y, relorigin.x + cos(PI/2 - omega)*100, relorigin.y - sin(PI/2 - omega)*100);
+    stroke(20, 20, 150);
+    line(relorigin.x, relorigin.y, relorigin.x + cos(PI/2 + theta)*100, relorigin.y + sin(PI/2 + theta)*100);
     
 }
-
 
 function update() {
     end.add(vel);
@@ -84,7 +81,7 @@ function limitRot() {
 
 function findAngles() {
     len = relorigin.dist(end) / 2;
-    omega = acos(len / legLength);
+    omega = acos(len / legLength); // angle between hip-end line and calf
 
     theta = angleref.angleBetween(relend);
 
@@ -99,11 +96,6 @@ function centerCanvas() {
 
 function windowResized() {
     centerCanvas();
-}
-
-
-function keyTyped() {
- 
 }
 
 function mouseDragged(event) {
