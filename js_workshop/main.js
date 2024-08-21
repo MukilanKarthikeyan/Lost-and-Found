@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(e) {
-    const colors = ['#337ab7', '#16A5A5', '#68BC00', '#FCC400', '#FE9200', '#D33115']
+    const colors = ['#337AB7', '#16A5A5', '#68BC00', '#FCC400', '#FE9200', '#D33115']
     const scrollers = Array.from(document.querySelectorAll(".scroller"));
 
     

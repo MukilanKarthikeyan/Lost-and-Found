@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sight Reading</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #2b2b2b
+    }
+    .holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2vh;
+        padding: 2vh 2vw 2vh 2vw;
+    }
+    .keyboard {
+        width: 28.6vw;
+        display: grid;
+        grid-template: 1fr / 1fr;
+        vertical-align: top;
+        justify-items: left;
+        
+    }
+    .keyboard > * {
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+    }
+    .whitekeys {
+        width: 28.6vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 1;
+        padding: 0vw 0vw 0vw 0vw;
+    }
+    .blackkeys {
+        height: 12vw;
+        width: 28.6vw;
+        display: flex;
+        flex-direction: row;
+        column-gap: 0.25vw;
+        z-index: 2;
+        vertical-align: top;
+        justify-content: left;
+        
+    }
+    .blackkeys .two {
+        width: 8vw;
+        display: flex;
+        justify-content: center;
+        padding: 0vh 3vw 0vh 3vw;
+        column-gap: 2vw;
+    }
+    .blackkeys .three {
+        width: 14vw;
+        display: flex;
+        justify-content: center;
+        padding: 0vh 3vw 0vh 3vw;
+        column-gap: 2vw;
+    }
+    .whitekey {
+        box-sizing: content-box;
+        height: 20vw;
+        width: 4vw;
+        background-color: antiquewhite;
+        border-radius: 1vw;
+        border-width: 0vw;
+        padding: 0vw 0vw 0vw 0vw;
+        
+    }
+    .blackkey {
+        box-sizing: content-box;
+        height: 12vw;
+        width: 2vw;
+        background-color:black;
+        border-radius: 0.5vw;
+        border-width: 0vw;
+        padding: 0vw 0vw 0vw 0vw;
+    }
+
+    .image {
+        width: 50vw;
+        height: 50vh;
+        border-radius: 5px;
+    }
+    
+  </style>
+  <script src="../p5/lib/p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+  <script src="MusicNotes.js"></script>
+</head>
+
+<body id="indicator">
+  <main>
+    <div class="holder">
+        <img class="image" id="note_display" src="../../res/loading image.jpg">
+        <div class="keyboard">
+            <div class="whitekeys">
+                <button class="whitekey" onclick="clickC()">C</button>
+                <button class="whitekey" onclick="clickD()">D</button>
+                <button class="whitekey" onclick="clickE()">E</button>
+                <button class="whitekey" onclick="clickF()">F</button>
+                <button class="whitekey" onclick="clickG()">G</button>
+                <button class="whitekey" onclick="clickA()">A</button>
+                <button class="whitekey" onclick="clickB()">B</button>
+            </div>
+            <div class="blackkeys">
+                <div class="two">
+                    <button class="blackkey" onclick="clickCSharp()">C</button>
+                    <button class="blackkey" onclick="clickDSharp()">D</button>
+                </div>
+                <div class="three">
+                    <button class="blackkey" onclick="clickFSharp()">F</button>
+                    <button class="blackkey" onclick="clickGSharp()">G</button>
+                    <button class="blackkey" onclick="clickASharp()">A</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+</body>
+
+</html>

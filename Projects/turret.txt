@@ -1,0 +1,35 @@
+Turret Rival dart flywheel
+
+2024.07.24 Wednesday
+procastanting form building the robot dog.
+I had an idea to build a nerf turret that can be controlled wirelessly/automated to track humans.I want to fire nerf rival rounds
+I spent quite a while designing the flywheel cage to hold teh whleewhees. I initially started out a couple days earlier with a laser cut style version of this.
+incidently i found a crunch labs build box for a dispencser that launhcs balls with a flywheels and seemd pretty cool. some design astehtics were based of off this int erns of angled magazine.
+
+yesterday I did abandon the laser cut model because it was quite difficult to find room to mount the feeder weehls to control rate of fire. instead I designed a cage reminicint of normal nerf cages.
+it does look like a shocked monkey with the magazein tube. 
+I do plan on returning to the laser cut version at some point to just make it easier ot manufature, or at the least get my sister a fun toy to assebmly and play with. I'll probaly make it manuel for simpliicty.
+
+Today i removed the magazine tube and replaced it iwth a twist in adapter to quick change magazines. in the future I want to use theis port to autofeed the system with a air+rotrary feeder for just a ton of ammo.
+
+other updates on the proejcts:
+- gotta order teh parts to come in for Buff the robot: nerf dog.
+
+slowed down my access to manufactoring to prototype, I have to wait a couple weeks until Aug.16 till i get back on campus and another copule days for the invention studio to be up an drunning. 
+my other option right now is to fix the 3d printer I have in my basement. I really gotta focus on the projects. I am really putting of coding of most kinds right now but eventually I have to address it. 
+
+
+
+
+how I want to operate turret: 
+initally with mouse inputs -> then get a picture overlay -> maybe use an arduino for this part? 
+web socket video dispaly
+
+
+the rapsbeery pi is absolute garabage at doing anything like pwn, it is very jittery. wheere as using the pCA9685 is much nicer but that does mean I need to hook up the voltage convertor. which is also why I am putting off Project:Buff
+
+
+
+flywheel motors: 130s
+rounds: 23mm diameter
+feeder weheels: n20 motor
