@@ -1,7 +1,4 @@
-```math
-y_t = Hx_t+v_t \\
-x_{t+1} = Ax_t+Bu_t+w_t \\
-```
+
 
 # The Lost and Found Archives
 Having fun making cool projects
