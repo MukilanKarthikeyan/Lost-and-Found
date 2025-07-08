@@ -1,0 +1,77 @@
+[
+        
+    {
+        "id" : "rock_basic_attack", 
+        "type" : "ROCK", 
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "rock_plus_one_stamina", 
+        "type" : "ROCK", 
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "rock_block", 
+        "type" : "ROCK", 
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "rock_rage", 
+        "type" : "ROCK", 
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "paper_basic_attack", 
+        "type" : "PAPER", 
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "paper_plus_one_stamina", 
+        "type" : "PAPER", 
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "paper_block", 
+        "type" : "PAPER", 
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "paper_rage", 
+        "type" : "PAPER", 
+        "stamina" : 1,
+        "attack" :  true
+    },
+
+    {
+        "id" : "sci_basic_attack", 
+        "type" : "SCISSORS",
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "sci_plus_one_stamina", 
+        "type" : "SCISSORS",
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "sci_block", 
+        "type" : "SCISSORS",
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "sci_rage", 
+        "type" : "SCISSORS",
+        "stamina" : 1,
+        "attack" :  true
+    }
+
+]

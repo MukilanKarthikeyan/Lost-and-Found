@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rpscmyk</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #000000
+    }
+
+    .hand {
+        background-color: #333333;
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 5px 5px 5px 5px;
+        margin: 5vh 10vw 5vh 10vw;
+    }
+
+    .card {
+        width: 15vh;
+        height: 20vh;
+        margin: 5px;
+        border-radius: 10px;
+        background-position: 50% 50%;
+        background-size: cover;
+        /* background-color: aliceblue; */
+        /* background-image: url(../../res/loading\ image.jpg); */
+        transform-style: preserve-3d;
+        transition: all 0.5s ease-in-out;
+    }
+
+    /* .card .flipped {
+        transform: rotateY(180deg);
+    }
+
+    .front,
+    .back {
+        backface-visibility: hidden;
+        position: absolute;
+        border-radius: 10px;
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .card .front {
+        transform: rotateY(180deg);
+    }
+
+    .card .back {
+        background-image: url(../../res/loading\ image.jpg);
+        background-position: center center;
+        background-size: cover;
+        backface-visibility: hidden;
+    } */
+
+    .selector {
+        width: 100vw;
+        height: 25vh;
+        background-color: #555555;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5px 5px 5px 5px;
+        overflow: auto;
+    }
+
+    .grid-selector {
+        width: 100vw;
+        height: 25vh;
+        background-color: #FFFFFF;
+        display: grid;
+        grid-gap: 1vh;
+        grid-template-columns: repeat(3, 15vh);
+        grid-template-rows: repeat(5, 20vh)
+    }
+
+  </style>
+  <script src="../p5/lib/p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+  
+</head>
+
+<body>
+  <!-- <h1>RPS CMYK</h1> -->
+
+  <div class="hand" id="oppHand">  
+  </div>
+
+  <div class="hand" id="playerHand">
+  </div>
+
+  <div class="selector" id="cardSelector">
+
+  </div>
+  <footer>
+    <button class="footer-button" onclick="location.href='../index.html'">Back</button>
+  </footer>
+
+  <script src="./rpscymk.js"></script>
+</body>
+
+</html>
