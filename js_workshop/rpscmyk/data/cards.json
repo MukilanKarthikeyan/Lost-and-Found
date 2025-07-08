@@ -48,7 +48,6 @@
         "stamina" : 1,
         "attack" :  true
     },
-
     {
         "id" : "sci_basic_attack", 
         "type" : "SCISSORS",
@@ -70,6 +69,12 @@
     {
         "id" : "sci_rage", 
         "type" : "SCISSORS",
+        "stamina" : 1,
+        "attack" :  true
+    },
+    {
+        "id" : "shoot_special", 
+        "type" : "SHOOT", 
         "stamina" : 1,
         "attack" :  true
     }

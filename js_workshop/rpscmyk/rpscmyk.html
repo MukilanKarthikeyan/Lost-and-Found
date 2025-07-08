@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="../../style.css">
   <style>
     body {
-      padding: 0;
-      margin: 0;
-      background-color: #000000
+        padding: 0;
+        margin: 0;
+        background-color: #000000
     }
 
     .hand {
@@ -28,12 +28,38 @@
         height: 20vh;
         margin: 5px;
         border-radius: 10px;
-        background-position: 50% 50%;
+        transition: 0.4s ease-out;
+        position: relative;
+        left: 0px;
+        /* background-position: 50% 50%;
         background-size: cover;
+        transition: 0.4s ease-out; */
         /* background-color: aliceblue; */
         /* background-image: url(../../res/loading\ image.jpg); */
-        transform-style: preserve-3d;
-        transition: all 0.5s ease-in-out;
+        /* transform-style: preserve-3d; */
+        /* transition: all 0.5s ease-in-out; */
+    }
+
+    .selector .card {
+        box-shadow: -1rem 0 3rem #323232;
+        /* transition: 0.4s ease-out; */
+        position: relative;
+        will-change: left;
+    }
+
+    .selector .card:not(:first-child) {
+        margin-left: -3vh;
+    }
+
+    .selector .card:hover {
+        transform: translateY(-20px);
+        /* transition: 0.4s ease-out; */
+    }
+
+    .selector .card:hover ~ .card {
+        /* position: relative; */
+        left: 2vw;
+        transition: 0.4s ease-in-out;
     }
 
     .card .infobox {
@@ -74,15 +100,18 @@
     } */
 
     .selector {
-        width: 100vw;
-        height: 25vh;
+        width: 85vw;
+        height: 30vh;
         background-color: #555555;
+        border-radius: 10px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
-        padding: 0px 0px 0px 0px;
+        /* justify-content: space-evenly; */
+        padding: 0vh 5vh 0vh 5vh;
+        margin: 0vh 5vw 0vh 5vw;
         overflow: auto;
+        left: calc(50% - 300px);
     }
 
     .grid-selector {
