@@ -16,7 +16,7 @@
         "id" : "rock_block", 
         "type" : "ROCK", 
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  false
     },
     {
         "id" : "rock_rage", 
@@ -40,7 +40,7 @@
         "id" : "paper_block", 
         "type" : "PAPER", 
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  false
     },
     {
         "id" : "paper_rage", 
@@ -65,7 +65,7 @@
         "id" : "sci_block", 
         "type" : "SCISSORS",
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  false
     },
     {
         "id" : "sci_rage", 

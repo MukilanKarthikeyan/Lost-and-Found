@@ -1,10 +1,16 @@
 
 
-const CardType = new Map([["ROCK" , "#00FFFF"],
+const CardTypeColor = new Map([["ROCK" , "#00FFFF"],
     ["PAPER" , "#FFFF00"],
     ["SCISSORS" , "#FF00FF"],
     ["SHOOT" , "#FFFFFF"],
     ["BLANK" , "#000000"]]);
+
+const CardTypeSymbol = new Map([["ROCK" , "./res/rock.png"],
+    ["PAPER" , "./res/paper.png"],
+    ["SCISSORS" , "./res/scissors.png"],
+    ["SHOOT" , "./res/shoot.png"],
+    ["BLANK" , "./res/card_back.png"]]);
 
 let allCards = [];
 let game = [[], []];
@@ -44,8 +50,16 @@ function generateCards(hand, id) {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
         // cardElement.setAttribute("data-name", card.id);
-        console.log(CardType.get(card.type));
-        cardElement.setAttribute("style", "background-color: " + CardType.get(card.type));
+        console.log(CardTypeColor.get(card.type));
+        cardElement.setAttribute("style", "background-color: " + CardTypeColor.get(card.type));
+        cardElement.textContent = card.id;
+        cardElement.innerHTML = `
+            <div class="infobox"> 
+            <img class="symbol" src=` +  CardTypeSymbol.get(card.type) +` >
+            <img class="symbol" src="./res/arrow.png" style="transform: rotate(` + (180 * card.attack) + `deg);">
+            </div>
+            <span>` + card.id + `</span>
+        `;
 
         document.getElementById(id).appendChild(cardElement);
     }
