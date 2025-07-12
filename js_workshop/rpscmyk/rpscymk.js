@@ -15,7 +15,6 @@ let game = [[], []];
 let bot = {"life" : 3, "stamina" : 0, "rage" : 0}
 let player = {"life" : 3, "stamina" : 0, "rage" : 0};
 
-
 let oppHand = [];
 let playerHand = [];
 
@@ -28,8 +27,8 @@ let playerHand = [];
 // document.getElementById("playerStamina").textContent = player.stamina;
 // document.getElementById("playerRage").textContent = player.rage;
 
-function flipCard() {
-  this.classList.toggle("card__flip");
+function flipCard(card) {
+  card.classList.toggle("card__flip");
 }
 
 function populateHand() {
@@ -47,7 +46,6 @@ function generateCards(hand, id) {
         const parentElement = document.getElementById(id);
         cardElement.classList.add("card__wrapper");
         // cardElement.setAttribute("data-name", card.id);
-        console.log(CardTypeColor.get(card.type));
         cardElement.setAttribute("style", "background-color: " + CardTypeColor.get(card.type));
         // cardElement.textContent = card.name;
         cardElement.innerHTML = `
@@ -64,32 +62,27 @@ function generateCards(hand, id) {
         // if (parentElement.className == "hand") {
         //     cardElement.addEventListener("click", flipCard);
         // }
-        if (id == "playerHand") {
-            cardElement.addEventListener("click", flipCard);
-        }
+        // if (id == "playerHand") {
+        //     cardElement.addEventListener("click", flipCard);
+        // }
         
         parentElement.appendChild(cardElement);
         
     }
 }
 
-
 document.getElementById("playerHand").addEventListener("click", function(event) {
     const grid = Array.from(this.children);
-    //   const baseOffset = grid[0].offsetTop;
-    //   const breakIndex = grid.findIndex(item => item.offsetTop > baseOffset);
-    //   const numPerRow = (breakIndex === -1 ? grid.length : breakIndex);
+    const baseOffset = grid[0].offsetTop;
+    const breakIndex = grid.findIndex(item => item.offsetTop > baseOffset);
+    const numPerRow = (breakIndex === -1 ? grid.length : breakIndex);
     const el = event.target.closest(".card__wrapper");
-    console.log(el);
-    console.log([...grid]);
     const el_index = [...grid].indexOf(el);
-    //   const position = (el_index % numPerRow) + 1;
-    const position = el_index;
-    console.log(position);
-    //   flipCard;
+      const position = (el_index % numPerRow);
+    flipCard(grid[position]);
 
-    const oppCard = Array.from(document.getElementById("oppHand").children)[position].classList.toggle("card__flip");
-    //   flipCard(oppCard);
+    const oppGrid = Array.from(document.getElementById("oppHand").children);
+    flipCard(oppGrid[position]);
 });
 
 function setupGame() {
@@ -114,7 +107,6 @@ async function loadCards() {
     generateCards(game[0], "oppHand");
     generateCards(game[1], "playerHand");
     generateCards(allCards, "cardSelector");
-    // console.log(allCards);
     setupGame();
 }
 
