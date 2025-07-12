@@ -1,82 +1,108 @@
 [
         
     {
-        "id" : "rock_basic_attack", 
+        "name" : "rock_basic_attack", 
+        "id" : 1,
         "type" : "ROCK", 
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  true,
+        "description" : "placeholder"
     },
     {
-        "id" : "rock_plus_one_stamina", 
+        "name" : "rock_plus_one_stamina", 
+        "id" : 2,
         "type" : "ROCK", 
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  true,
+        "description" : "placeholder"
     },
     {
-        "id" : "rock_block", 
+        "name" : "rock_block", 
+        "id" : 3,
         "type" : "ROCK", 
         "stamina" : 1,
-        "attack" :  false
+        "attack" :  false,
+        "description" : "placeholder"
     },
     {
-        "id" : "rock_rage", 
+        "name" : "rock_rage", 
+        "id" : 4,
         "type" : "ROCK", 
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  true,
+        "description" : "placeholder"
     },
     {
-        "id" : "paper_basic_attack", 
+        "name" : "paper_basic_attack", 
+        "id" : 5,
         "type" : "PAPER", 
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  true,
+        "description" : "placeholder"
     },
     {
-        "id" : "paper_plus_one_stamina", 
+        "name" : "paper_plus_one_stamina", 
+        "id" : 6,
         "type" : "PAPER", 
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  true,
+        "description" : "placeholder"
     },
     {
-        "id" : "paper_block", 
+        "name" : "paper_block", 
+        "id" : 7,
         "type" : "PAPER", 
         "stamina" : 1,
-        "attack" :  false
+        "attack" :  false,
+        "description" : "placeholder"
     },
     {
-        "id" : "paper_rage", 
+        "name" : "paper_rage", 
+        "id" : 8,
         "type" : "PAPER", 
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  true,
+        "description" : "placeholder"
     },
     {
-        "id" : "sci_basic_attack", 
+        "name" : "sci_basic_attack", 
+        "id" : 9,
         "type" : "SCISSORS",
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  true,
+        "description" : "placeholder"
     },
     {
-        "id" : "sci_plus_one_stamina", 
+        "name" : "sci_plus_one_stamina", 
+        "id" : 10,
         "type" : "SCISSORS",
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  true,
+        "description" : "placeholder"
     },
     {
-        "id" : "sci_block", 
+        "name" : "sci_block", 
+        "id" : 11,
         "type" : "SCISSORS",
         "stamina" : 1,
-        "attack" :  false
+        "attack" :  false,
+        "description" : "placeholder"
     },
     {
-        "id" : "sci_rage", 
+        "name" : "sci_rage", 
+        "id" : 12,
         "type" : "SCISSORS",
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  true,
+        "description" : "placeholder"
     },
     {
-        "id" : "shoot_special", 
+        "name" : "shoot_special", 
+        "id" : 13,
         "type" : "SHOOT", 
         "stamina" : 1,
-        "attack" :  true
+        "attack" :  true,
+        "description" : "placeholder"
     }
 
 ]

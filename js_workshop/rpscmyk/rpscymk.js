@@ -1,5 +1,3 @@
-
-
 const CardTypeColor = new Map([["ROCK" , "#00FFFF"],
     ["PAPER" , "#FFFF00"],
     ["SCISSORS" , "#FF00FF"],
@@ -30,10 +28,9 @@ let playerHand = [];
 // document.getElementById("playerStamina").textContent = player.stamina;
 // document.getElementById("playerRage").textContent = player.rage;
 
-
-
-
-
+function flipCard() {
+  this.classList.toggle("card__flip");
+}
 
 function populateHand() {
     for (let i = 0; i < 2; i++) {
@@ -44,26 +41,69 @@ function populateHand() {
     }
 }
 
-
 function generateCards(hand, id) {
     for (let card of hand) {
         const cardElement = document.createElement("div");
-        cardElement.classList.add("card");
+        const parentElement = document.getElementById(id);
+        cardElement.classList.add("card__wrapper");
         // cardElement.setAttribute("data-name", card.id);
         console.log(CardTypeColor.get(card.type));
         cardElement.setAttribute("style", "background-color: " + CardTypeColor.get(card.type));
-        cardElement.textContent = card.id;
+        // cardElement.textContent = card.name;
         cardElement.innerHTML = `
-            <div class="infobox"> 
-            <img class="symbol" src=` +  CardTypeSymbol.get(card.type) +` >
-            <img class="symbol" src="./res/arrow.png" style="transform: rotate(` + (180 * card.attack) + `deg);">
+            <div class="card__front" id="` + parentElement.childElementCount + `">
+                <div class="infobox"> 
+                <img class="symbol" src=` +  CardTypeSymbol.get(card.type) +` >
+                <img class="symbol" src="./res/arrow.png" style="transform: rotate(` + (180 * card.attack) + `deg);">
+                </div>
+                <span>` + card.name + `</span>
             </div>
-            <span>` + card.id + `</span>
+            <div class="card__back">
+            <div>
         `;
-
-        document.getElementById(id).appendChild(cardElement);
+        // if (parentElement.className == "hand") {
+        //     cardElement.addEventListener("click", flipCard);
+        // }
+        if (id == "playerHand") {
+            cardElement.addEventListener("click", flipCard);
+        }
+        
+        parentElement.appendChild(cardElement);
+        
     }
 }
+
+
+document.getElementById("playerHand").addEventListener("click", function(event) {
+    const grid = Array.from(this.children);
+    //   const baseOffset = grid[0].offsetTop;
+    //   const breakIndex = grid.findIndex(item => item.offsetTop > baseOffset);
+    //   const numPerRow = (breakIndex === -1 ? grid.length : breakIndex);
+    const el = event.target.closest(".card__wrapper");
+    console.log(el);
+    console.log([...grid]);
+    const el_index = [...grid].indexOf(el);
+    //   const position = (el_index % numPerRow) + 1;
+    const position = el_index;
+    console.log(position);
+    //   flipCard;
+
+    const oppCard = Array.from(document.getElementById("oppHand").children)[position].classList.toggle("card__flip");
+    //   flipCard(oppCard);
+});
+
+function setupGame() {
+    // const parentElement = document.getElementById('oppHand');
+    const hands = document.getElementsByClassName('hand');
+    for (let i = 0; i < hands.length; i++) {
+        const allChildren = hands[i].querySelectorAll('.card__wrapper'); // Gets all children with 'child-class'
+        allChildren.forEach(child => {
+            child.classList.toggle("card__flip");
+        });
+    }
+    
+}
+
 async function loadCards() {
     const res = await fetch("./data/cards.json");
     const data = await res.json();
@@ -74,89 +114,61 @@ async function loadCards() {
     generateCards(game[0], "oppHand");
     generateCards(game[1], "playerHand");
     generateCards(allCards, "cardSelector");
-    console.log(allCards);
+    // console.log(allCards);
+    setupGame();
 }
-
-// fetch("./data/cards.json")
-//     .then((res) => res.json())
-//     .then((data) => {allCards = [...data];
-//         console.log(allCards);
-//     });
-
-
 
 
 loadCards();
-// console.log(allCards)
 
 
+// function simulateCombat(playerCard, opponentCard) {
+//     const result = {
+//         playerLife: 0,
+//         playerStamina: -playerCard.stamina,
+//         playerRage: 0,
+//         opponentLife: 0,
+//         opponentStamina: -opponentCard.stamina,
+//         opponentRage: 0,
+//     };
 
 
-
-
-
-
-
-
-// game.push(opp);
-// game.push(player);
-
-// console.log(game);
-
-// let opp = [{"id" : "rock_basic_attack", "type" : "ROCK", "stamina" : 1, "attack" : true}, 
-//     {"id" : "rock_plus_one_stamina", "type" : "ROCK", "stamina" : 1, "attack" : true},
-//     {"id" : "rock_block", "type" : "ROCK", "stamina" : 1, "attack" : true},
-//     {"id" : "rock_block", "type" : "ROCK", "stamina" : 1, "attack" : true},
-//     {"id" : "paper_basic_attack", "type" : "PAPER", "stamina" : 1, "attack" : true}];
-
-
-// let player = [{"id" : "rock_basic_attack", "type" : "ROCK", "stamina" : 1, "attack" : true}, 
-//     {"id" : "rock_plus_one_stamina", "type" : "ROCK", "stamina" : 1, "attack" : true},
-//     {"id" : "rock_block", "type" : "ROCK", "stamina" : 1, "attack" : true},
-//     {"id" : "rock_block", "type" : "ROCK", "stamina" : 1, "attack" : true},
-//     {"id" : "paper_basic_attack", "type" : "PAPER", "stamina" : 1, "attack" : true}];
-
-
-
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function(e) {
-//     const colors = ['#FFFF00', '#FF00FF', '#00FFFF', "FFFFFF"]
-//     const hands = Array.from(document.querySelectorAll(".hand"));
-
-//     console.log(hands);
-
-//     //console.log(scrollers);
-//     for (let i = 0; i < hands.length; i++) {
-//         let currHand = game[i];
-//         for (let j = 0; j < currHand.length; j++) {
-
-//             var card = document.createElement('div')
-//             Object.assign(elem, {
-//                 className: 'card',
-//                 onclick: function () {
-//                     alert('Clicked!')
-//                 }
-//             })
-//             card.setAttribute("style", "background-color: " + CardType[cardHand[j].type]);
-//             hands[i].appendChild(card);
-
-//         }
+//     if playerCard.type == opponentCard {
+//         return "tie";
+//     } else if playterCard.type == (opponentCard.type + 1) % 3 {
+//         return player win;
+//     } else {
+//         return opponent win;
 //     }
-// });
-
-
-
-
-// std::vector<Card> playerhand;
-// eventListern.click(onCardselect) {
-//     playerHand.push(cardSelected);
-// };
-
-// for (auto card: palyerhands) {
-//     card = 
-//     SVGLinearGradientElement "id" player, . pushcard
 // }
+
+
+const results = {};
+const keys = [
+    "rock_basic_attack", 
+    "rock_plus_one_stamina", 
+    "rock_block", 
+    "rock_rage", 
+    "paper_basic_attack", 
+    "paper_plus_one_stamina", 
+    "paper_block", 
+    "paper_rage", 
+    "sci_basic_attack", 
+    "sci_plus_one_stamina", 
+    "sci_block", 
+    "sci_rage", 
+    "shoot_special"
+]
+for (const playerCardName of keys) {
+  results[playerCardName] = {};
+  for (const opponentCardName of keys) {
+    results[playerCardName][opponentCardName] = {
+      playerLife: 0,
+      playerStamina: 0,  // Replace with real data
+      playerRage: 0,
+      opponentLife: 0,
+      opponentStamina: 0,  // Replace with real data
+      opponentRage: 0
+    };
+  }
+}

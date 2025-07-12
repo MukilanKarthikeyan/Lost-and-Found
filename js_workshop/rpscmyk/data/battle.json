@@ -1,0 +1,535 @@
+{
+  "rock_basic_attack": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "rock_plus_one_stamina": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "rock_block": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "rock_rage": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "paper_basic_attack": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "paper_plus_one_stamina": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "paper_block": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "paper_rage": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "sci_basic_attack": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "sci_plus_one_stamina": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "sci_block": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "sci_rage": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+  "shoot_special": {
+    "rock_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "rock_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "paper_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_basic_attack" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_plus_one_stamina" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_block" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "sci_rage" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+    "shoot_special" : {
+        "playerLife": 0, "playerStamina": -1, "playerRage": 0, "opponentLife": 0, "opponentStamina": -1, "opponentRage": 0
+    },
+  },
+}
